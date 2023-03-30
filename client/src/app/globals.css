@@ -1,0 +1,69 @@
+@import "src/lib/styles/tailwind.css";
+@import "src/lib/styles/layouts.css";
+@import "src/lib/styles/titles.css";
+@import "src/lib/styles/buttons.css";
+@import "src/lib/styles/hero.css";
+@import "src/lib/styles/inputs.css";
+
+:root {
+  --white: #fff;
+  --primary: #1c4433;
+  --primary-light: #80c491;
+  --primary-lighter: #e6f3e9;
+  --red-light: #ff8066;
+  --blue-lighter: #f4f7ff;
+}
+
+* {
+  box-sizing: border-box;
+  @apply m-0 p-0;
+}
+
+html,
+body,
+main {
+  @apply flex flex-col;
+  @apply w-full max-w-screen;
+  @apply overflow-x-hidden;
+}
+
+html,
+body {
+  @apply min-h-screen;
+}
+
+html {
+  @apply bg-white text-primary;
+  font-size: 16px;
+}
+
+body {
+  @apply relative;
+}
+
+main {
+  @apply pb-8;
+}
+
+p {
+  @apply mb-2;
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.fade {
+  animation: fadeIn 300ms linear;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

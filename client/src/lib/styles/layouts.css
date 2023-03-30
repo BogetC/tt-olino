@@ -1,0 +1,11 @@
+.ctn {
+  @apply w-full p-8 py-6;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-col-center {
+  @apply flex flex-col justify-center items-center;
+}

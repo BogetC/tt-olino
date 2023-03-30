@@ -1,0 +1,39 @@
+.button {
+  @apply flex justify-center items-center gap-3;
+  @apply px-2 py-1 lg:px-3 lg:py-2;
+  @apply bg-blue-lighter text-primary;
+  @apply border border-blue-lighter rounded-lg;
+  transition: background 300ms, border 300ms, color 300ms;
+}
+
+:not(:disabled).button {
+  @apply hover:bg-transparent hover:text-primary-light hover:border-primary-light;
+}
+
+.button.button_actions {
+  @apply uppercase;
+  @apply bg-red-light text-white;
+  @apply border border-red-light rounded-full;
+}
+
+:not(:disabled).button.button_actions {
+  @apply hover:bg-transparent hover:text-red-light hover:border-red-light;
+}
+
+.button.button_actions__inverted {
+  @apply bg-transparent text-red-light;
+  @apply border border-red-light rounded-full;
+}
+
+:not(:disabled).button.button_actions__inverted {
+  @apply hover:bg-red-light hover:text-white hover:border-red-light;
+}
+
+.button.button_success {
+  @apply bg-primary-light text-white;
+  @apply border border-primary-light rounded-full;
+}
+
+:not(:disabled).button.button_success {
+  @apply hover:bg-transparent hover:text-primary-light hover:border-primary-light;
+}

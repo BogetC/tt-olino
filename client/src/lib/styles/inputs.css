@@ -1,0 +1,19 @@
+.radio-input {
+  display: none;
+}
+
+.radio-label {
+  @apply flex justify-center items-center gap-3;
+  @apply px-2 py-1 lg:px-3 lg:py-2;
+  @apply bg-blue-lighter text-primary;
+  @apply border-2 border-blue-lighter rounded-lg;
+  @apply hover:bg-transparent hover:text-primary-light hover:border-primary-light;
+  @apply w-full h-full;
+  @apply cursor-pointer;
+  transition: background 300ms, border 300ms, color 300ms;
+}
+
+.radio-input:checked + .radio-label {
+  @apply bg-transparent text-primary font-bold;
+  @apply border-primary;
+}

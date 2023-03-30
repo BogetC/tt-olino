@@ -1,0 +1,7 @@
+.hero {
+  @apply w-full;
+}
+
+.hero.hero__primary {
+  @apply bg-primary text-white;
+}
