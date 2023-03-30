@@ -9,13 +9,13 @@ export const getSectors = (activities: Activity[]) => {
   return removeDuplicates(sectors);
 };
 
-export const getCategory = (activities: Activity[], sector: string) => {
+export const getCategories = (activities: Activity[], sector: string) => {
   const filtered = activities.filter((a) => a.sector === sector);
   const categories = filtered.map((f) => f.category);
   return removeDuplicates(categories);
 };
 
-export const getActivity = (
+export const getActivities = (
   activities: Activity[],
   sector: string,
   category: string

@@ -6,7 +6,7 @@ import { ActivitiesList } from "@/lib/components/client/ActivitiesList";
 
 const API_URL = process.env.API_URL ?? "http://localhost:5000";
 
-const getActivities = async (): Promise<Activity[]> => {
+const fetchActivities = async (): Promise<Activity[]> => {
   const res = await fetch(`${API_URL}/api/activities`, {
     cache: "force-cache",
   });
@@ -14,7 +14,7 @@ const getActivities = async (): Promise<Activity[]> => {
 };
 
 export async function generateMetadata(): Promise<Metadata> {
-  const activities = await getActivities();
+  const activities = await fetchActivities();
   const sectors = getSectors(activities);
   return {
     title: "Olino - Secteur d'activité",
@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Page() {
-  const activities = await getActivities();
+  const activities = await fetchActivities();
   return (
     <main>
       <ActivitiesContextProvider activities={activities}>

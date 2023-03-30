@@ -1,6 +1,6 @@
 "use client";
 
-import { getActivity } from "@/lib/utils/activities";
+import { getActivities } from "@/lib/utils/activities";
 import { Activity } from "@/lib/models/Activity";
 import { useForm } from "react-hook-form";
 import classNames from "classnames";
@@ -63,7 +63,7 @@ export const ActivityForm = (props: ActivityFormProps) => {
       </h2>
       <form className="flex-col-center gap-6" onSubmit={handleSubmit(onSubmit)}>
         <PaginationContextProvider
-          data={getActivity(activities, sector, category)}
+          data={getActivities(activities, sector, category)}
           maxElementPerPage={9}
         >
           <ActivityPicker register={register} />
